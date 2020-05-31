@@ -2,10 +2,10 @@
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>construct</Title>
+      <Title>info</Title>
       <Author>Vitaly Dostovalov</Author>
-      <Description>Creates a construct method for the class</Description>
-      <Shortcut>construct</Shortcut>
+      <Description>Inserts info method call with strFmt</Description>
+      <Shortcut>info</Shortcut>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
         <SnippetType>SurroundsWith</SnippetType>
@@ -14,18 +14,13 @@
     <Snippet>
       <Declarations>
         <Literal Editable="true">
-          <ID>className</ID>
-          <ToolTip>Class name</ToolTip>
-          <Default>ClassName</Default>
+          <ID>arg</ID>
+          <ToolTip>Argument</ToolTip>
+          <Default>arg1</Default>
         </Literal>
       </Declarations>
-      <Code Language="X++" Kind="method decl">
-        <![CDATA[public static $className$ construct()
-    {
-        $className$ instanse = new $className$();
-
-        return instanse;
-    }]]>
+      <Code Language="X++" Kind="method body">
+        <![CDATA[info(strFmt("%1", $arg$));]]>
       </Code>
     </Snippet>
   </CodeSnippet>
